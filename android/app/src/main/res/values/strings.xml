@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Finanças Borges Franco</string>
+    <string name="title_activity_main">Finanças Borges Franco</string>
+    <string name="package_name">br.com.borgesfranco.financas</string>
+    <string name="custom_url_scheme">br.com.borgesfranco.financas</string>
+</resources>

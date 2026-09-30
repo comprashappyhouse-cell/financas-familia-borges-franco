@@ -18,6 +18,9 @@ Sistema familiar de controle financeiro com uma conta unificada, receitas, gasto
 - Ao marcar como pago, o lançamento fica verde e registra data/hora; o `title` mostra a data ao passar o mouse.
 - Temas claro e escuro persistidos no navegador.
 - Layout responsivo para celular e computador, com identidade visual 3D e brasão Borges Franco.
+- Contas pendentes em azul, pagas em verde e atrasadas em vermelho, com botão de pagamento.
+- Aplicativo Android via Capacitor, conectado ao mesmo servidor e banco de dados.
+- PWA instalável com atualização automática dos recursos publicados.
 
 ## Arquitetura atual
 
@@ -63,6 +66,9 @@ Tabela `transactions`:
 - `db/schema.ts`: esquema Drizzle.
 - `db/index.ts`: conexão com Turso.
 - `scripts/migrate-turso.mjs`: inicialização idempotente do banco.
+- `capacitor.config.ts`: configuração do aplicativo Android apontando para o servidor Render.
+- `android/`: projeto nativo Android.
+- `releases/Financas-Familia-Borges-Franco.apk`: APK instalável.
 - `render.yaml`: configuração de publicação.
 
 ## Comandos
