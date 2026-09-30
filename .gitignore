@@ -45,3 +45,4 @@ next-env.d.ts
 /outputs/
 /work/
 .turso-db-token.tmp
+.render-service.json.tmp

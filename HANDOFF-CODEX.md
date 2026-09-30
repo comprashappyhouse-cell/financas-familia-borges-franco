@@ -89,5 +89,6 @@ node scripts/migrate-turso.mjs
 
 ## Links
 
-- Site público no Render: será preenchido após a primeira publicação.
-- Repositório GitHub: será preenchido após a criação.
+- Site público no Render: https://financas-familia-borges-franco.onrender.com
+- Painel do serviço no Render: https://dashboard.render.com/web/srv-dauhf6qd0e5s73foum4g
+- Repositório GitHub: https://github.com/comprashappyhouse-cell/financas-familia-borges-franco
