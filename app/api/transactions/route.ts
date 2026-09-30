@@ -20,7 +20,7 @@ export async function POST(request: Request) {
       type: data.type === "income" ? "income" : "expense",
       recurrence: data.recurrence === "monthly" ? "monthly" : data.recurrence === "installment" ? "installment" : "one_time",
       amountCents, startDate: String(data.startDate ?? new Date().toISOString().slice(0, 10)),
-      installmentCount: Math.max(1, Number(data.installmentCount) || 1), createdAt: new Date().toISOString(),
+      installmentCount: Math.max(1, Number(data.installmentCount) || 1), paid: false, paidAt: null, createdAt: new Date().toISOString(),
     }).returning();
     return Response.json({ transaction }, { status: 201 });
   } catch (error) { return fail(error); }
@@ -34,6 +34,7 @@ export async function PUT(request: Request) {
       type: data.type === "income" ? "income" : "expense",
       recurrence: data.recurrence === "monthly" ? "monthly" : data.recurrence === "installment" ? "installment" : "one_time",
       amountCents: Number(data.amountCents), startDate: String(data.startDate), installmentCount: Math.max(1, Number(data.installmentCount) || 1),
+      paid: data.type === "expense" && data.paid === true, paidAt: data.type === "expense" && data.paid === true ? String(data.paidAt || new Date().toISOString()) : null,
     }).where(eq(transactions.id, Number(data.id))).returning();
     return Response.json({ transaction });
   } catch (error) { return fail(error); }

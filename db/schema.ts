@@ -10,5 +10,7 @@ export const transactions = sqliteTable("transactions", {
   amountCents: integer("amount_cents").notNull(),
   startDate: text("start_date").notNull(),
   installmentCount: integer("installment_count").notNull().default(1),
+  paid: integer("paid", { mode: "boolean" }).notNull().default(false),
+  paidAt: text("paid_at"),
   createdAt: text("created_at").notNull(),
 });
